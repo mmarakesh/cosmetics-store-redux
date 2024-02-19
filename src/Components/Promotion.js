@@ -1,7 +1,9 @@
 import {useState} from 'react';
 import { dataPromotion } from '../data/dataPromotion';
+import { useTranslation } from 'react-i18next';
 
 function Promotion() {
+  const { t } = useTranslation();
 
 const [promotion, setPromotion] = useState(dataPromotion);
 const [showText, setShowText] = useState(false);
@@ -23,13 +25,13 @@ return(
      return(
       <div>
       <div className='container'>
-      <h2>{(productName)}</h2>
+      <h2>{t(productName)}</h2>
       </div>
  
       <div className='container'>
-      <p>{(showMore ? description : description.substring(0,170) + ' ....')}
+      <p>{t(showMore ? description : description.substring(0,170) + ' ....')}
         <button className='btnShow' onClick={() => showTextClick(item)}>
-        {(showMore ? 'show less' : 'show more')}
+        {t(showMore ? 'show less' : 'show more')}
         </button>
         </p>
         </div>
@@ -39,14 +41,14 @@ return(
       </div>
 
       <div className='container'>
-        <button className='remove' onClick={() => removePromotion(id)}>{("not interested")}</button>
+        <button className='remove' onClick={() => removePromotion(id)}>{t("not interested")}</button>
       </div>
      </div>
      )
     })}
     
     <div className='container'>
-        <button className='remove' onClick={() => setPromotion([])}>delete all</button>
+        <button className='remove' onClick={() => setPromotion([])}>{t('delete all')}</button>
     </div>
     </div>
 )

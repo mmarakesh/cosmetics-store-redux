@@ -1,10 +1,11 @@
 import {useState} from 'react';
 import { dataSlides } from "../data/dataSlides";
+import { useTranslation } from 'react-i18next';
 
 function Slides() {
+    const { t } = useTranslation();
     const [photo, setPhoto] = useState(0);
     const {image} = dataSlides[photo];
-    console.log(dataSlides[photo])
 
     const previousPhoto = () => {
         setPhoto ( photo => {
@@ -30,11 +31,11 @@ function Slides() {
     return(
         <div className='daySale'>
             <div className='textSale'>
-            <h2>{('Shop More Skincare Deals')}</h2>
-            <p>{(`Don't miss out on these one-day sales`)}. 
-            {(' Get up to 50% off top Skincare')}. <br/> 
-            {(' New deals through 3/17')}.
-            {(' No code needed')}.</p>
+            <h2>{t('Shop More Skincare Deals')}</h2>
+            <p>{t(`Don't miss out on these one-day sales`)}. 
+            {t(' Get up to 50% off top Skincare')}. <br/> 
+            {t(' New deals through 3/17')}.
+            {t(' No code needed')}.</p>
             </div>
 
         <div className='boxSlides'>

@@ -1,9 +1,11 @@
 import { useSelector } from "react-redux";
 import CartItem from "./CartItem";
 import { getCartItems, getTotalPrice } from "../../redux/cartSlice";
+import { useTranslation } from "react-i18next";
 
 
 const Cart = () => {
+    const { t } = useTranslation();
     const cartItems = useSelector(getCartItems);
     const totalPrice = useSelector(getTotalPrice);
     return (
@@ -15,7 +17,7 @@ const Cart = () => {
         </div>
         <div className="cart_contents">
             {cartItems.map(cartItem => <CartItem cartItem={cartItem}/>)} 
-            <h3>TOTAL: ${totalPrice}</h3>   
+            <h3>{t('TOTAL')}: ${totalPrice}</h3>   
         </div>
         </>
     )
