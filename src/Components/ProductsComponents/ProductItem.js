@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 
 const ProductItem = ({everyItem}) => {
     const { t } = useTranslation();
-    const [quantity, setQuantity] = useState(0);
+    const [quantity, setQuantity] = useState(1);
     const dispatch = useDispatch();
     return (
         <div className="product-card">
