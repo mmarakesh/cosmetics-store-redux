@@ -12,7 +12,7 @@ const Products = () => {
                 if(selectedCategory === 'all') return true;
                 return selectedCategory === everyItem.searchTerm;
             })
-            .map(everyItem => <ProductItem everyItem = {everyItem} key={everyItem.id}/>)}
+            .map(everyItem => <ProductItem everyItem = {everyItem} key={everyItem.name}/>)}
         </div>
     )
 }

@@ -19,11 +19,11 @@ const showTextClick = (item) => {
 }
 return(
   <div>
-    {promotion.map(item => {
+    {promotion.map((item, index) => {
       const{id, productName, description, image, showMore} = item;
 
      return(
-      <div>
+      <div key={index}>
       <div className='container'>
       <h2>{t(productName)}</h2>
       </div>
@@ -44,7 +44,7 @@ return(
         <button className='remove' onClick={() => removePromotion(id)}>{t("not interested")}</button>
       </div>
      </div>
-     )
+     ) 
     })}
     
     <div className='container'>

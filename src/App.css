@@ -86,6 +86,7 @@
   nav {
   background: #cfeae5;
   display: flex;
+  justify-content: space-around;
   padding: 15px;
 }
 .nav-container {

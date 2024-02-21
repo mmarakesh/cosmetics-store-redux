@@ -16,7 +16,7 @@ const Cart = () => {
             </svg>       
         </div>
         <div className="cart_contents">
-            {cartItems.map(cartItem => <CartItem cartItem={cartItem}/>)} 
+            {cartItems.map(cartItem => <CartItem cartItem={cartItem} key={cartItem.id}/>)} 
             <h3>{t('TOTAL')}: ${totalPrice}</h3>   
         </div>
         </>
