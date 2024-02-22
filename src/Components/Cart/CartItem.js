@@ -9,16 +9,17 @@ const CartItem = ({cartItem}) => {
     const dispatch = useDispatch();
     
     return (
-        <div>
-            <p><b>{cartItem.quantity}</b> - {t(elements.name)}</p>
-            <p>Price: ${elements.price * cartItem.quantity}</p>
+        <>
+        <p><b>{t(elements.name)}</b></p>
+        <div className="order">
+            <p className="quantity"><b>{cartItem.quantity} x ${elements.price}</b></p>
             <span onClick={() => dispatch(removeItemFromCart(
                 {cartItemId: cartItem.id}
             ))}>
             <img className="icon" src="https://img.icons8.com/material-outlined/48/000000/trash--v1.png" alt="price"/> 
             </span>
-            
         </div>
+        </>
     )
 }
 
