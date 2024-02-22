@@ -223,6 +223,9 @@ margin-bottom: 30px;
       align-self: flex-start;
       margin-left: 0px;
     } 
+    .cont {
+      flex-wrap: wrap;
+    }
     .daySale {
       flex-direction: column;
     }
