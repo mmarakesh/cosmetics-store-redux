@@ -8,7 +8,7 @@
   height: 30px;
   width: 25px;
   cursor: pointer;
-  margin-right: 0px;
+  margin-right: -20px;
   }
 .cart_contents {
   position: absolute;
@@ -51,7 +51,6 @@
   .cart_location {
     display: flex;
     justify-content: flex-end;
-    align-items: baseline;
     position: relative;
   }
   .item-count {
@@ -81,3 +80,8 @@
  .quantityNone {
   display: none;
  }
+ @media all and (max-width: 500px) {
+ .cart_location {
+ margin-top: 20px;
+ }
+}
