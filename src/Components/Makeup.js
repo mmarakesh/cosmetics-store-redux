@@ -9,11 +9,12 @@ function Makeup() {
     return(
         <div>
             <div className="products">
-                <h1 className="lookAtMe">{t('Look at me')}</h1>
+                <h1 className="lookAtMe">{t('Look at me')}</h1>    
             </div>
+            <Cart/>
             <AllCategories/>
             <SearchProducts/>
-            <Cart/>
+            
             <Products/>
 
         </div>

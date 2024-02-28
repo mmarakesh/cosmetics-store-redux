@@ -32,7 +32,6 @@ const Cart = () => {
     }
     }
 
-    
     const onCartHide = (event) => {
         setIsActive(current => !current);
     } 
