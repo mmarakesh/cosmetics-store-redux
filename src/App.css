@@ -14,8 +14,8 @@
   background-color: black;
   }
  
-.cart_btn {
-  background-color: black;
+.add_btn {
+  background-color: #cf112c;
   border: none;
   border-radius: 5px;
   padding: 8px;
@@ -58,12 +58,16 @@
     width: 20px;
   }
   .btn-lang{
-  padding: 5px 10px;
+  padding: 5px 13px;
   border-radius: 10px;
+  border: none;
+  background-color: #fff;
+  color: #000;
   }
   .btn-lang:hover{
   background-color: #000;
   color: #fff;
+  
   }
   .btn-container {
   margin-left: auto;

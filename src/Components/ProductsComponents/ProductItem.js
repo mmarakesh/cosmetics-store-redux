@@ -31,7 +31,7 @@ const ProductItem = ({everyItem}) => {
             <p>$ {price}</p>
             <div className="box_quantity">
             <ChangeQuantity quantity = {quantity} setQuantity = {setQuantity}/>
-            <button className="cart_btn" onClick={addToCart}>{t('Add to cart')}</button>
+            <button className="add_btn" onClick={addToCart}>{t('Add to cart')}</button>
             </div>
         </div>
     )

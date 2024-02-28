@@ -48,10 +48,36 @@
     align-items: baseline;
     position: relative;
   }
-  .item-count {
+  /* .item-count {
     position: absolute;
     top: -35px;
     right: 32px;
     z-index: 1;
     font-size: 20px;
+  } */
+  .item-count {
+    position: absolute;
+    top: -35px;
+    right: 50px;
+    font-size: 15px;
+    padding: 6px;
+    background-color: #cf112c;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    z-index: 3;
+    color: #fff;
   }
+ .btn-buy {
+  border-radius: 5px;
+  background-color: #cf112c;
+  border: none;
+  color: #fff;
+  padding: 5px 10px;
+ }
+ .none-count {
+  display: none;
+ }
+ .quantityNone {
+  display: none;
+ }
